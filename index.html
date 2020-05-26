@@ -1,0 +1,245 @@
+<!--
+Created using JS Bin
+http://jsbin.com
+
+Copyright (c) 2020 by bukfa-web (http://jsbin.com/xexanuq/31/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+-<!DOCTYPE html>
+<html lang = "HU">
+<head>
+<meta name="description" content="Pokerprofik Statisztika">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Pokerprofik Statisztika</title>
+   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<style id="jsbin-css">
+/*--2020.03.23--*/
+/*-- Background colors for containers
+
+.profile-card {
+  background-color: hsla(60, 100%, 50%, .4);
+}
+.head {
+  background-color: hsla(120, 100%, 50%, .4);
+}
+.content {
+  background-color: hsla(120, 100%, 50%, .4);
+}
+.profile-image {
+  background-color: hsla(300, 100%, 50%, .4);
+}
+.name-headline {
+  background-color: hsla(300, 100%, 50%, .4);
+}
+.about {
+  background-color: hsla(300, 100%, 50%, .4);
+}
+.links {
+  background-color: hsla(300, 100%, 50%, .4);
+}--*/
+/*--CSS reset--*/
+* {
+margin : 0;
+padding : 0;
+box-sizing : border-box;
+font-size : 100%;
+}
+  /*-- Pozicionálás--*/
+
+.profile-card {
+width : 480px;
+max-width : calc(150vw - 10px);
+}
+
+body {
+height : 100vh;
+display : flex;
+align-items : center;
+justify-content : center;
+background : url("https://i.imgur.com/GVGz5EM.jpg") center center no-repeat fixed;
+background-size : cover;
+}
+
+.head, .links {
+text-align : center;
+}
+
+.head, .content {
+width : 50%;
+margin : 0 auto;
+}
+
+.content {
+border-top : 1px solid hsl(0 0% 30% / 0.8);
+}
+
+.head, .about {
+margin-bottom : 10%;
+}
+
+.content {
+padding : 10% 50%;
+}
+  /*--Profile image--*//
+
+.profile-image {
+margin-top : -60px;
+}
+
+
+img {
+width : 120px;
+height : 120px;
+border-radius : 50%;
+padding : 1px;
+background-color : #666;
+filter : grayscale(50%);
+transition : all 0.5s ease-in-out;
+}
+
+
+img:hover {
+filter : grayscale(20%);
+transform : scale(1.8);
+}
+
+
+.profile-card {
+background-color : hsl(0 0% 100% / 0.5);
+border-radius : 30px;
+box-shadow : 10px 10px 80px hsl(0 0% 0% / 0.8);
+}
+
+.gomb {
+  
+  position: left;
+  top: 50%;
+  left: 10%
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 15px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 25px;
+  box-shadow: 0 9px #999;
+}
+
+.gomb:hover {background-color: red}
+
+.gomb:active {
+  background-color: #3e8e41;
+  box-shadow: 0 9px #666;
+  transform: translateY(4px);
+}
+
+.gomb1 {
+  position: center;
+  top: 50%;
+  left: 50%;
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 15px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 25px;
+  box-shadow: 0 9px #999;
+}
+
+.gomb1:hover {background-color: yellow}
+
+.gomb1:active {
+  background-color: #3e8e41;;
+  box-shadow: 0 9px #666;
+  transform: translateY(4px);
+}
+
+.gomb2 {
+  position: right;
+  top: 50%;
+  left: 90%;
+  display: inline-block;
+  padding: 15px 10px;
+  font-size: 15px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 25px;
+  box-shadow: 0 9px #999;
+}
+
+.gomb2:hover {background-color: blue}
+
+.gomb2:active {
+  background-color: #3e8e41;
+  box-shadow: 0 9px #666;
+  transform: translateY(4px);
+}
+
+</style>
+</head>
+<body>
+  <div class="profile-card">
+    <div class="head">
+      <div class="profile-image">
+        <img src="https://i.imgur.com/C5gCcSF.jpg" alt="Zsugabubus">
+      </div>
+      <div class="name-headline">
+        <h1>Zsugabubus</h1>
+        <h2>Poker Player</h2>
+        <span>from:</span>
+        <p><i class="fa fa-map-marker"></i> Pécs, HU</p>
+      </div>
+    </div>
+    
+    <div class="content"></div>
+    
+   <button class="gomb"onclick="myFunction()">Nyertes partik</button>
+
+<script>
+function myFunction() {
+  window.open("https://docs.google.com/forms/d/e/1FAIpQLSf2i1DWW8CkEZSGmiKHuvtN3w57uVPfEsF93butnd_G1vgIzw/viewform?usp=sf_link");
+}
+</script>
+   
+    
+    <button class="gomb1" onclick="myFunction1()">Vásárlások</button>
+
+<script>
+function myFunction1() {
+  window.open("https://docs.google.com/forms/d/e/1FAIpQLSfVdBOvqiGJy2HT5vImYano51-iMtzNpaAnuNkZ391bAleXVQ/viewform?usp=sf_link");
+}
+</script>
+    
+    <button class="gomb2" onclick="myFunction2()">Excel megnyitása</button>
+
+<script>
+function myFunction2() {
+  window.open("https://docs.google.com/spreadsheets/d/1gDgCoCyjk8kdcz92yS84VOuHkF9c65GORgblUcbxKms/edit?usp=sharing");
+}
+</script>
+
+    
+    <div class="content"></div>
+     
+   </div>
+  
+    
+</body>
+</html>
